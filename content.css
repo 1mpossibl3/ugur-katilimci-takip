@@ -1,0 +1,17 @@
+.takeAttendanceBtn {
+  width: 40px;
+  height: 40px;
+  background: #3c4043;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.takeAttendanceBtn:hover {
+  background: #45474a;
+  box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
+}

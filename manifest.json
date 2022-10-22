@@ -1,0 +1,27 @@
+{
+  "name": "Uğur Okulları - Katılımcı Takip Sistemi",
+  "description": "Uğur Okulları toplantılarına katılan katılımcıların listesinin saklanması ve raporlanması için geliştirilmiş bir uygulamadır.",
+  "version": "1.0.0",
+  "author": "batuhanoztrk",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.meet.google.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["scripting", "tabs", "storage"],
+  "host_permissions": ["https://*.meet.google.com/*"]
+}
