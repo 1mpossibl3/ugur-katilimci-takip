@@ -5,6 +5,15 @@ document.addEventListener("DOMContentLoaded", function () {
   let participants = [];
   chrome.storage.sync.get("participants", function (data) {
     participants = data.participants;
+    const universalBOM = "\uFEFF";
+    const csvContent =
+      "data:text/csv;charset=utf-8," +
+      encodeURIComponent(universalBOM + participants.join("\n"));
+
+    const btn = document.getElementById("download");
+
+    btn.setAttribute("href", csvContent);
+    btn.setAttribute("download", "participants.csv");
 
     for (const participant of participants) {
       const li = document.createElement("li");
