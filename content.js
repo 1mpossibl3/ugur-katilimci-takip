@@ -1,5 +1,5 @@
 const boostrap = () => {
-  const btnContainer = document.querySelector(".R5ccN");
+  const btnContainer = document.querySelector(".tMdQNe");
 
   const btn = document.createElement("button");
 
